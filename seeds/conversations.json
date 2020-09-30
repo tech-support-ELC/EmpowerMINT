@@ -1,0 +1,27 @@
+{
+  "conversations": {
+    "chats": {
+      "chat1": {
+        "title": "Love Mustard",
+        "lastMessage": "Hi justDoIt! I'm ok. How's it going there?",
+        "timeStamp": "1601504331"
+      }
+    },
+    "members": {
+      "chat1": {
+        "loveLace": true,
+        "justDoIt": true
+      }
+    },
+    "message": {
+      "chat1": {
+        "m1": { "username": "justDoIt", "message": "Hi loveLace! How are you?", "timeStamp": "1601504330" },
+        "m2": {
+          "username": "loveLace",
+          "message": "Hi justDoIt! I'm ok. How's it going there?",
+          "timeStamp": "1601504331"
+        }
+      }
+    }
+  }
+}

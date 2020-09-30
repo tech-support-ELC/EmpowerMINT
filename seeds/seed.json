@@ -1,0 +1,57 @@
+{
+  "users": {
+    "loveLace": {
+      "name": "Ada Lovelace",
+      "type": {
+        "survivor": false,
+        "supporter": false,
+        "warrior I": true,
+        "warrior II": false,
+        "warrior III": false,
+        "warrior IV": false
+      },
+      "contacts": {
+        "justDoIt": true
+      }
+    },
+    "justDoIt": {
+      "name": "DeJohn Mustard",
+      "type": {
+        "survivor": false,
+        "supporter": false,
+        "warrior I": true,
+        "warrior II": false,
+        "warrior III": false,
+        "warrior IV": false
+      },
+      "contacts": {
+        "loveLace": true
+      }
+    }
+  },
+  "conversations": {
+    "chats": {
+      "chat1": {
+        "title": "Love Mustard",
+        "lastMessage": "Hi justDoIt! I'm ok. How's it going there?",
+        "timeStamp": "1601504331"
+      }
+    },
+    "members": {
+      "chat1": {
+        "loveLace": true,
+        "justDoIt": true
+      }
+    },
+    "message": {
+      "chat1": {
+        "m1": { "username": "justDoIt", "message": "Hi loveLace! How are you?", "timeStamp": "1601504330" },
+        "m2": {
+          "username": "loveLace",
+          "message": "Hi justDoIt! I'm ok. How's it going there?",
+          "timeStamp": "1601504331"
+        }
+      }
+    }
+  }
+}
