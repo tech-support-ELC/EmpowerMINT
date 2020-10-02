@@ -7,21 +7,13 @@ const SignUp = ({ history }) => {
     async (event) => {
       event.preventDefault();
       const { email, password, username } = event.target.elements;
-      // const userRef = app.database().ref('users')
-      // const user = {
-      //  email,
-      //  password
-      // }
-
       try {
         await app.auth().createUserWithEmailAndPassword(email.value, password.value);
-        const UID = app.auth().currentUser.uid;
-
+        const UID = app.auth().currentUser.uid; //GETS USER ID FROM AUTHENTICAITON
         app
           .database()
           .ref("users/" + UID)
           .set({ username: username.value });
-        console.log(app.auth().currentUser.uid); //GETS USER ID FROM AUTHENTICAITON
         history.push("/home");
       } catch (error) {
         alert(error);
