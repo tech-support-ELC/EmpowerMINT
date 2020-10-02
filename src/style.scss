@@ -1,10 +1,13 @@
-// $theme-colors: (
-//   "primary": #0074d9,
-//   "danger": #ff4136,
-// );
+// Commented out temporarily because when I tried adding padding to the header icons they would shrink instead of increasing padding around the icon. Very strange.
+// Commented everything and left only line 13 and it problem still occured. Must be something going on with bootstrap?
 
-$body-bg: rgb(141, 66, 66);
-$body-color: #111;
+// // $theme-colors: (
+// //   "primary": #0074d9,
+// //   "danger": #ff4136,
+// // );
 
-// @import "~bootstrap/scss/bootstrap.scss";
-@import "../node_modules/bootstrap/scss/bootstrap";
+// $body-bg: rgb(141, 66, 66);
+// $body-color: #111;
+
+// // @import "~bootstrap/scss/bootstrap.scss";
+// @import "../node_modules/bootstrap/scss/bootstrap";
