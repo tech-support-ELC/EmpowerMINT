@@ -1,18 +1,19 @@
 import React from "react";
-import { Route, Switch } from "react-router-dom";
-import { Home, Landing, ChatList, SignUp, Profile } from "./index";
+import { BrowserRouter as Router, Route } from "react-router-dom";
+import { Home, Landing, ChatList, SignUp, Profile, LogIn, PrivateRoute } from "./index";
 
 const Routes = () => {
   return (
-    <div>
-      <Switch>
+    <Router>
+      <div>
         <Route exact path="/" component={Landing} />
-        <Route path="/home" component={Home} />
-        {/* <Route path="/chats" component={ChatList} />
         <Route path="/signup" component={SignUp} />
+        <Route path="/login" component={LogIn} />
+        <PrivateRoute exact path="/home" component={Home} />
+        {/* <Route path="/chats" component={ChatList} />
         <Route path="/profile" component={Profile} /> */}
-      </Switch>
-    </div>
+      </div>
+    </Router>
   );
 };
 
