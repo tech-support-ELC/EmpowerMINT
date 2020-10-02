@@ -9,19 +9,19 @@ const SignUp = ({ history }) => {
       const { email, password, username } = event.target.elements;
       // const userRef = app.database().ref('users')
       // const user = {
-      //  email, 
+      //  email,
       //  password
       // }
 
       try {
         await app.auth().createUserWithEmailAndPassword(email.value, password.value);
-        const UID = app.auth().currentUser.uid    
-        const apple = {"apple":"appleTEST"}
-        app.database().ref('users').push(
-          // {[UID] : {"TEST":"TEST"} }
-          apple
-        )
-        console.log(app.auth().currentUser.uid) //GETS USER ID FROM AUTHENTICAITON 
+        const UID = app.auth().currentUser.uid;
+
+        app
+          .database()
+          .ref("users/" + UID)
+          .set({ username: username.value });
+        console.log(app.auth().currentUser.uid); //GETS USER ID FROM AUTHENTICAITON
         history.push("/home");
       } catch (error) {
         alert(error);
@@ -50,37 +50,33 @@ const SignUp = ({ history }) => {
         </label>
 
         <div>
-        <label>
-          pronouns
-        </label>
+          <label>pronouns</label>
 
-          <select> 
-          <option>she/hers</option>
-          <option>him/his</option>
-          <option>they/them</option>
+          <select>
+            <option>she/hers</option>
+            <option>him/his</option>
+            <option>they/them</option>
           </select>
         </div>
 
         <div>
-        <label>
-          I am a:
-        </label>
+          <label>I am a:</label>
 
-          <select> 
-          <option>Survivor</option>
-          <option>Supporter</option>
-          <option>Warrior - Stage 1</option>
-          <option>Warrior - Stage 2</option>
-          <option>Warrior - Stage 3</option>
-          <option>Warrior - Stage 4</option>
+          <select>
+            <option>Survivor</option>
+            <option>Supporter</option>
+            <option>Warrior - Stage 1</option>
+            <option>Warrior - Stage 2</option>
+            <option>Warrior - Stage 3</option>
+            <option>Warrior - Stage 4</option>
           </select>
         </div>
 
         <div>
-        <label>
-          Bio/Interests
-          <input name="Bio/Interests" type="text" placeholder="Bio/Interests" />
-        </label>
+          <label>
+            Bio/Interests
+            <input name="Bio/Interests" type="text" placeholder="Bio/Interests" />
+          </label>
         </div>
 
         <button type="submit">Sign Up</button>
