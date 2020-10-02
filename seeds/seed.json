@@ -1,7 +1,7 @@
 {
   "users": {
-    "loveLace": {
-      "name": "Ada Lovelace",
+    "UID1": {
+      "username": "loveLace",
       "type": {
         "survivor": false,
         "supporter": false,
@@ -11,11 +11,11 @@
         "warrior IV": false
       },
       "contacts": {
-        "justDoIt": true
+        "UID2": true
       }
     },
-    "justDoIt": {
-      "name": "DeJohn Mustard",
+    "UID2": {
+      "username": "justDoIt",
       "type": {
         "survivor": false,
         "supporter": false,
@@ -25,7 +25,7 @@
         "warrior IV": false
       },
       "contacts": {
-        "loveLace": true
+        "UID1": true
       }
     }
   },
