@@ -4,7 +4,7 @@ import { Home, Landing, ChatList, SignUp, Profile } from "./index";
 
 const Routes = () => {
   return (
-    <div>
+    <div id="main">
       <Switch>
         <Route exact path="/" component={Landing} />
         <Route path="/home" component={Home} />

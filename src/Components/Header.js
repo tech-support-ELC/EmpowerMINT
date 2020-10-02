@@ -1,5 +1,5 @@
 import React from "react";
-import "./Header.css";
+import "./Header.scss";
 import PersonIcon from "@material-ui/icons/Person";
 import ChatIcon from "@material-ui/icons/Chat";
 import IconButton from "@material-ui/core/IconButton";
@@ -22,13 +22,13 @@ function Header() {
           <Nav className="mr-auto">
             <Nav.Link href="profile">
               <IconButton>
-                <PersonIcon className="header-icon" fontSize="large" />
+                <PersonIcon className="header-icon" style={{ fontSize: 60 }} />
               </IconButton>
             </Nav.Link>
 
             <Nav.Link href="chat">
               <IconButton>
-                <ChatIcon className="header-icon" fontSize="large" />
+                <ChatIcon className="header-icon" style={{ fontSize: 60 }} />
               </IconButton>
             </Nav.Link>
             {/* <NavDropdown title="Dropdown" id="basic-nav-dropdown">
