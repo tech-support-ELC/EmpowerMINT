@@ -1,5 +1,10 @@
-@import "~bootstrap/scss/bootstrap";
+// $theme-colors: (
+//   "primary": #0074d9,
+//   "danger": #ff4136,
+// );
 
-body {
-  background-color: blue;
-}
+$body-bg: rgb(141, 66, 66);
+$body-color: #111;
+
+// @import "~bootstrap/scss/bootstrap.scss";
+@import "../node_modules/bootstrap/scss/bootstrap";
