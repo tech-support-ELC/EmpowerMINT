@@ -9,7 +9,7 @@ import Navbar from "react-bootstrap/Navbar";
 function Header() {
   return (
     <div className="header">
-      <Navbar bg="light" expand="xl">
+      <Navbar bg="light" expand="sm">
         <Navbar.Brand href="#home">React-Bootstrap</Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
