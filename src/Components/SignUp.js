@@ -8,7 +8,9 @@ const SignUp = ({ history }) => {
       event.preventDefault();
       const { email, password, username } = event.target.elements;
       try {
-        await app.auth().createUserWithEmailAndPassword(email.value, password.value);
+        await app
+          .auth()
+          .createUserWithEmailAndPassword(email.value, password.value);
         const UID = app.auth().currentUser.uid; //GETS USER ID FROM AUTHENTICAITON
         app
           .database()
@@ -67,7 +69,11 @@ const SignUp = ({ history }) => {
         <div>
           <label>
             Bio/Interests
-            <input name="Bio/Interests" type="text" placeholder="Bio/Interests" />
+            <input
+              name="Bio/Interests"
+              type="text"
+              placeholder="Bio/Interests"
+            />
           </label>
         </div>
 

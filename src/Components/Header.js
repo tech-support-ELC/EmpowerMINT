@@ -1,5 +1,5 @@
 import React from "react";
-import "./Header.css";
+// import "./style/Header.scss";
 import PersonIcon from "@material-ui/icons/Person";
 import ChatIcon from "@material-ui/icons/Chat";
 import IconButton from "@material-ui/core/IconButton";
@@ -9,7 +9,7 @@ import Navbar from "react-bootstrap/Navbar";
 function Header() {
   return (
     <div className="header">
-      <Navbar bg="light" expand="sm">
+      <Navbar id="nav" bg="light" expand="sm">
         <Navbar.Brand href="home">
           <img
             className="header-logo"
@@ -19,16 +19,16 @@ function Header() {
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
-          <Nav className="mr-auto">
+          <Nav className="mr-auto" id="mr" style={{ marginRight: 0 }}>
             <Nav.Link href="profile">
               <IconButton>
-                <PersonIcon className="header-icon" fontSize="large" />
+                <PersonIcon className="header-icon" style={{ fontSize: 60 }} />
               </IconButton>
             </Nav.Link>
 
             <Nav.Link href="chat">
               <IconButton>
-                <ChatIcon className="header-icon" fontSize="large" />
+                <ChatIcon className="header-icon" style={{ fontSize: 60 }} />
               </IconButton>
             </Nav.Link>
             {/* <NavDropdown title="Dropdown" id="basic-nav-dropdown">
