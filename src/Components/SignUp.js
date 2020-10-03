@@ -1,5 +1,4 @@
 import React from "react";
-import { connect } from "react-redux";
 
 const SignUp = (props) => {
   const { handleSubmit } = props;
@@ -56,3 +55,5 @@ const SignUp = (props) => {
 // });
 
 // export default connect(null, mapDispatch)(Signup);
+
+export default SignUp;
