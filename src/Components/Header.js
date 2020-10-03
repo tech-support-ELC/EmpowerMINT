@@ -15,6 +15,7 @@ function Header() {
             className="header-logo"
             src={require("../images/plainleaf.png")}
             alt="hand with mint leaf"
+            //WANT TO FIX SIZING HERE
           />
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
@@ -22,13 +23,13 @@ function Header() {
           <Nav className="mr-auto" id="mr" style={{ marginRight: 0 }}>
             <Nav.Link href="profile">
               <IconButton>
-                <PersonIcon className="header-icon" style={{ fontSize: 50 }} />
+                <PersonIcon className="header-icon" style={{ fontSize: 20 }} />
               </IconButton>
             </Nav.Link>
 
             <Nav.Link href="chat">
               <IconButton>
-                <ChatIcon className="header-icon" style={{ fontSize: 50 }} />
+                <ChatIcon className="header-icon" style={{ fontSize: 20 }} />
               </IconButton>
             </Nav.Link>
             {/* <NavDropdown title="Dropdown" id="basic-nav-dropdown">

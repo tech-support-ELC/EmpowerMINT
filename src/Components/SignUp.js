@@ -1,12 +1,23 @@
-import React, { useCallback } from "react";
+import { EventAvailableOutlined } from "@material-ui/icons";
+import React, { useCallback, useState } from "react";
 import { withRouter } from "react-router";
 import app from "../firebase";
 
 const SignUp = ({ history }) => {
+
+  const [pronouns, setPronouns] = useState('')
+
+  const handleChange = (event) => {
+    setPronouns(event.target.value)
+  }
+
   const handleSignUp = useCallback(
     async (event) => {
+
       event.preventDefault();
+
       const { email, password, username } = event.target.elements;
+
       try {
         await app
           .auth()
@@ -15,7 +26,13 @@ const SignUp = ({ history }) => {
         app
           .database()
           .ref("users/" + UID)
-          .set({ username: username.value });
+          .set({ 
+            username: username.value, 
+            pronouns: pronouns,
+            contacts: []
+            // type: ,
+            // bio: , 
+          });
         history.push("/home");
       } catch (error) {
         alert(error);
@@ -46,10 +63,10 @@ const SignUp = ({ history }) => {
         <div>
           <label>pronouns</label>
 
-          <select>
-            <option>she/hers</option>
-            <option>him/his</option>
-            <option>they/them</option>
+          <select name = "prounouns" value={pronouns} onChange = {handleChange} >
+            <option value = "she/hers">she/hers</option>
+            <option value = "him/his">him/his</option>
+            <option value = "they/them">they/them</option>
           </select>
         </div>
 
