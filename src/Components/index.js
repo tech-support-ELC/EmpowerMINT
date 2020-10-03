@@ -7,3 +7,5 @@ export { default as ChatList } from "./ChatList";
 export { default as SingleChat } from "./SingleChat";
 export { default as Profile } from "./Profile";
 export { default as Landing } from "./Landing";
+export { default as LogIn } from "./LogIn";
+export { default as PrivateRoute } from "./PrivateRoute";
