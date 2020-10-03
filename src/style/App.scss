@@ -21,13 +21,19 @@ code {
 
 button {
   background: rgb(201, 249, 218);
-  background: rgb(201, 249, 218);
   background: linear-gradient(
     180deg,
-    rgba(201, 249, 218, 1) 13%,
-    rgba(170, 245, 195, 1) 38%,
-    rgba(113, 196, 141, 1) 65%
+    rgba(201, 249, 218, 1) 8%,
+    rgba(181, 247, 203, 1) 49%,
+    rgba(129, 211, 156, 1) 83%
   );
+  // background: rgb(201, 249, 218);
+  // background: linear-gradient(
+  //   180deg,
+  //   rgba(201, 249, 218, 1) 13%,
+  //   rgb(181, 247, 203) 38%,
+  //   rgb(129, 211, 156) 65%
+  // );
   color: black;
   border: 0px;
   box-shadow: 3px 5px 10px rgba(0, 0, 0, 0.2);
