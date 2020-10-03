@@ -4,16 +4,21 @@ import { Home, Landing, ChatList, SignUp, Profile, LogIn, PrivateRoute } from ".
 
 const Routes = () => {
   return (
-    <Router>
+   
       <div>
+       <Switch>
         <Route exact path="/" component={Landing} />
+
         <Route path="/signup" component={SignUp} />
         <Route path="/login" component={LogIn} />
         <PrivateRoute exact path="/home" component={Home} />
+    
         {/* <Route path="/chats" component={ChatList} />
-        <Route path="/profile" component={Profile} /> */}
-      </div>
-    </Router>
+        <Route path="/signup" component={SignUp} />*/}
+        <Route path="/profile" component={Profile} />
+      </Switch>
+    </div>
+
   );
 };
 
