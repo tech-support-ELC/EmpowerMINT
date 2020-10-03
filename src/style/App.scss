@@ -30,7 +30,7 @@ button {
   );
   color: black;
   border: 0px;
-  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+  box-shadow: 3px 5px 10px rgba(0, 0, 0, 0.2);
 
   &:hover {
     // background: rgb(137, 193, 155);
@@ -50,16 +50,12 @@ button {
   }
 }
 .btn-light {
-  border: 0px;
-  border-color: none;
+  border: 1px solid;
+  border-color: rgb(119, 158, 132);
   color: black;
   &:hover {
     color: white;
   }
-}
-
-.btn {
-  border: 0px;
 }
 
 .MuiSvgIcon-root {
