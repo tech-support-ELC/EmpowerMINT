@@ -1,6 +1,6 @@
 import React from "react";
 import { Header, Routes, Footer } from "./index";
-import "./App.css";
+// import "./App.css";
 import { AuthProvider } from "./Auth";
 
 function App() {
