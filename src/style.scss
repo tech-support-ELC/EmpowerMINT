@@ -3,8 +3,8 @@
 //   "danger": #ff4136,
 // );
 
-$body-bg: rgb(193, 250, 210);
-$body-color: #111;
-
 // @import "~bootstrap/scss/bootstrap.scss";
-@import "../node_modules/bootstrap/scss/bootstrap";
+// @import "../node_modules/bootstrap/scss/bootstrap";
+@import "bootstrap";
+@import "../src/Components/style/Header.scss";
+@import "../src/Components/style/App.scss";

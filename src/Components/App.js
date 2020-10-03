@@ -1,6 +1,6 @@
 import React from "react";
 import { Header, Routes, Footer } from "./index";
-import "./App.scss";
+import "./style/App.scss";
 
 function App() {
   return (
