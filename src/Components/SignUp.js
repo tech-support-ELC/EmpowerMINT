@@ -7,7 +7,7 @@ import Form from "react-bootstrap/Form";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 
-const SignUp = ({ history }) => {
+const SignUp = ({ history }, props) => {
   const handleSignUp = useCallback(
     async (event) => {
       event.preventDefault();
@@ -28,7 +28,7 @@ const SignUp = ({ history }) => {
     },
     [history]
   );
-
+  const close = props.onHide;
   return (
     <div>
       <Modal.Header closeButton>
