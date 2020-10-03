@@ -22,13 +22,13 @@ function Header() {
           <Nav className="mr-auto" id="mr" style={{ marginRight: 0 }}>
             <Nav.Link href="profile">
               <IconButton>
-                <PersonIcon className="header-icon" style={{ fontSize: 60 }} />
+                <PersonIcon className="header-icon" style={{ fontSize: 50 }} />
               </IconButton>
             </Nav.Link>
 
             <Nav.Link href="chat">
               <IconButton>
-                <ChatIcon className="header-icon" style={{ fontSize: 60 }} />
+                <ChatIcon className="header-icon" style={{ fontSize: 50 }} />
               </IconButton>
             </Nav.Link>
             {/* <NavDropdown title="Dropdown" id="basic-nav-dropdown">

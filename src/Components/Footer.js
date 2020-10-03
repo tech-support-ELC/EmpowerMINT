@@ -12,7 +12,7 @@ function Footer() {
         <Container>
           <Navbar.Brand href="home">
             <img
-              className="header-logo"
+              className="footer-logo"
               src={require("../images/transparentlogo.png")}
               alt="hand with mint leaf"
             />

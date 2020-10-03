@@ -11,7 +11,7 @@ function Profile() {
           <Card.Title>Name</Card.Title>
           <Card.Text>Warrior X</Card.Text>
           <Card.Text>Bio</Card.Text>
-          <Button variant="outline-info">Edit profile</Button>
+          <Button variant="light">Edit profile</Button>
         </Card.Body>
       </Card>
     </div>

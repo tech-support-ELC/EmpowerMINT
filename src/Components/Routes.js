@@ -13,6 +13,7 @@ import {
 const Routes = () => {
   return (
     <div id="main">
+      <div id="bg"></div>
       <Switch>
         <Route exact path="/" component={Landing} />
         <Route path="/signup" component={SignUp} />
