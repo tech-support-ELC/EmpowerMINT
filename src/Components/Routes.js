@@ -16,6 +16,7 @@ const Routes = () => {
       <div id="bg"></div>
       <Switch>
         <Route exact path="/" component={Landing} />
+        <Route path="/landing" component={Landing} />
         <Route path="/signup" component={SignUp} />
         <Route path="/login" component={LogIn} />
         <PrivateRoute exact path="/home" component={Home} />
