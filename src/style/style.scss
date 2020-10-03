@@ -6,5 +6,6 @@
 // @import "~bootstrap/scss/bootstrap.scss";
 // @import "../node_modules/bootstrap/scss/bootstrap";
 @import "bootstrap";
-@import "../src/Components/style/Header.scss";
-@import "../src/Components/style/App.scss";
+@import "./Header.scss";
+@import "./App.scss";
+@import "./Profile.scss";

@@ -25,10 +25,13 @@ code {
   //   background-position: center;
   //   opacity: 0.6;
   // }
-  background-image: url("../../images/pink_ribbon.png");
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url("../images/pink_ribbon.png");
   background-repeat: no-repeat;
   background-size: 300px 500px;
   background-position: center;
   opacity: 0.6;
-  height: 70vh;
+  max-height: 70vh;
 }

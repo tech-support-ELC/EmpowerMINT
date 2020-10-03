@@ -1,0 +1,14 @@
+.card {
+  max-width: 45vw;
+  min-width: 200px;
+  max-height: 500px;
+  min-height: 200px;
+  margin: auto;
+
+  background: rgba(227, 245, 237, 0.8);
+  color: black;
+  border: 2px solid rgb(82, 209, 139);
+}
+.card-header {
+  border-bottom: 2px solid rgb(82, 209, 139);
+}
