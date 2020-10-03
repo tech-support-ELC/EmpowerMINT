@@ -1,14 +1,17 @@
 import React from "react";
 import { Header, Routes, Footer } from "./index";
-import "./style/App.scss";
+import "./App.css";
+import { AuthProvider } from "./Auth";
 
 function App() {
   return (
-    <div className="App">
-      <Header />
-      <Routes />
-      <Footer />
-    </div>
+    <AuthProvider>
+      <div className="App">
+        <Header />
+        <Routes />
+        <Footer />
+      </div>
+    </AuthProvider>
   );
 }
 

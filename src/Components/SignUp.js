@@ -1,59 +1,86 @@
-import React from "react";
+import React, { useCallback } from "react";
+import { withRouter } from "react-router";
+import app from "../firebase";
 
-const SignUp = (props) => {
-  const { handleSubmit } = props;
+const SignUp = ({ history }) => {
+  const handleSignUp = useCallback(
+    async (event) => {
+      event.preventDefault();
+      const { email, password, username } = event.target.elements;
+      try {
+        await app
+          .auth()
+          .createUserWithEmailAndPassword(email.value, password.value);
+        const UID = app.auth().currentUser.uid; //GETS USER ID FROM AUTHENTICAITON
+        app
+          .database()
+          .ref("users/" + UID)
+          .set({ username: username.value });
+        history.push("/home");
+      } catch (error) {
+        alert(error);
+      }
+    },
+    [history]
+  );
+
   return (
-    <div className="loginSignup">
-      <form onSubmit={handleSubmit}>
-        <h1>Sign up</h1>
-        <label>Name displayed on your profile</label>
-        <input name="name" type="text" placeholder="name" required />
+    <div>
+      <h1>Sign Up</h1>
+      <form onSubmit={handleSignUp}>
+        <label>
+          email
+          <input name="email" type="email" placeholder="Email" />
+        </label>
 
-        <label>How do you identify in your battle with breast cancer?</label>
-        <select
-          onChange={this.handleChange}
-          value={this.state.type}
-          name="type"
-        >
-          <option value="none">Required</option>
-          <option value="survivor">Survivor</option>
-          <option value="supporter">Supporter</option>
-          <option value="warriorI">Warrior I</option>
-          <option value="warriorII">Warrior II</option>
-          <option value="warriorIII">Warrior III</option>
-          <option value="warriorIV">Warrior IV</option>
-        </select>
+        <label>
+          password
+          <input name="password" type="password" placeholder="Password" />
+        </label>
 
-        {/* <label>Email</label>
-        <input name="email" type="email" required />
+        <label>
+          username
+          <input name="username" type="username" placeholder="Username" />
+        </label>
 
-        <label>Password</label>
-        <input name="password" type="password" required /> */}
+        <div>
+          <label>pronouns</label>
 
-        <button type="submit">Sign up</button>
+          <select>
+            <option>she/hers</option>
+            <option>him/his</option>
+            <option>they/them</option>
+          </select>
+        </div>
+
+        <div>
+          <label>I am a:</label>
+
+          <select>
+            <option>Survivor</option>
+            <option>Supporter</option>
+            <option>Warrior - Stage 1</option>
+            <option>Warrior - Stage 2</option>
+            <option>Warrior - Stage 3</option>
+            <option>Warrior - Stage 4</option>
+          </select>
+        </div>
+
+        <div>
+          <label>
+            Bio/Interests
+            <input
+              name="Bio/Interests"
+              type="text"
+              placeholder="Bio/Interests"
+            />
+          </label>
+        </div>
+
+        <button type="submit">Sign Up</button>
       </form>
-      {/* <p>OR</p>
-
-      <a target="_self" href="/auth/google">
-        <i />
-        <span>Sign up with Google</span>
-      </a> */}
     </div>
   );
 };
 
-// const mapDispatch = (dispatch, ownProps) => ({
-//   handleSubmit: (event) => {
-//     event.preventDefault();
-//     const firstName = event.target.firstName.value;
-//     const lastName = event.target.lastName.value;
-//     const email = event.target.email.value;
-//     const password = event.target.password.value;
-//     const credentials = { firstName, lastName, email, password };
-//     dispatch(signup(credentials, ownProps.history));
-//   },
-// });
-
-// export default connect(null, mapDispatch)(Signup);
-
-export default SignUp;
+export default withRouter(SignUp);
