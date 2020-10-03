@@ -3,12 +3,44 @@ import React, { useCallback, useContext } from "react";
 import { withRouter, Redirect } from "react-router";
 import * as firebase from "firebase/app";
 import app from "../firebase";
+import Modal from "react-bootstrap/Modal";
+import Button from "react-bootstrap/Button";
+import Form from "react-bootstrap/Form";
+import Row from "react-bootstrap/Row";
+import Col from "react-bootstrap/Col";
 
-const LogIn = () => {
+const LogIn = (props) => {
+  const close = props.onHide;
   return (
     <div>
-      <h1>Log In</h1>
-      <button>Log In</button>
+      <Modal.Header closeButton>
+        <Modal.Title>Log in</Modal.Title>
+      </Modal.Header>
+      <Modal.Body>
+        <Form>
+          <Row>
+            <Col>
+              <Form.Group controlId="username">
+                <Form.Label>Username</Form.Label>
+                <Form.Control type="string" />
+              </Form.Group>
+            </Col>
+          </Row>
+          <Row>
+            <Col>
+              <Form.Group controlId="password">
+                <Form.Label>Password</Form.Label>
+                <Form.Control type="password" />
+              </Form.Group>
+            </Col>
+          </Row>
+        </Form>
+      </Modal.Body>
+      <Modal.Footer>
+        <Button variant="light" onClick={close}>
+          Log in
+        </Button>
+      </Modal.Footer>
     </div>
   );
 };
