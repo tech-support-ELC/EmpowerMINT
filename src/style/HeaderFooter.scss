@@ -1,7 +1,9 @@
-.header {
-  // justify-content: space-between;
+.navbar {
+  padding: 0 15px;
 }
-
+.bg-light {
+  background-color: rgb(252, 252, 243) !important;
+}
 .header-logo {
   height: 100px;
   object-fit: contain;
@@ -21,6 +23,15 @@
   justify-content: flex-end;
 }
 
-#mr {
-  margin-right: 0;
+.mr-auto,
+.mx-auto {
+  margin-right: 0 !important;
+}
+
+.container {
+  margin: 0;
+}
+
+.footer-logo {
+  height: 170px;
 }
