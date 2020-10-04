@@ -9,13 +9,12 @@ import Form from "react-bootstrap/Form";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 
-const LogIn = (props) => {
-  const { history } = props;
+const LogIn = (history) => {
+  // const { history } = props;
   const handleLogIn = useCallback(
     async (event) => {
       event.preventDefault();
 
-      console.log("event", event.target);
       const { email, password } = event.target.elements;
 
       try {
@@ -28,8 +27,8 @@ const LogIn = (props) => {
           .then(function (snapshot) {
             console.log(snapshot.val(), "user????");
           });
-        props.onHide();
-        // history.push("/home");
+        // props.onHide();
+        history.push("/home");
       } catch (error) {
         alert(error);
       }
@@ -64,4 +63,4 @@ const LogIn = (props) => {
   );
 };
 
-export default LogIn;
+export default withRouter(LogIn);
