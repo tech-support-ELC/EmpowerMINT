@@ -1,5 +1,3 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
 ## EmpowerMINT
 
 #ELCHackathon Hack for Pink Submission
@@ -10,3 +8,6 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 * [Emma Seely-Katz](https://github.com/emseely)
 * [Kristi Nanco](https://github.com/knanco)
 * [Taihua Rubin](https://github.com/TaihuaRubin)
+
+
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
