@@ -9,10 +9,19 @@ const SignUp = ({ history }) => {
     async (event) => {
       event.preventDefault();
 
-      const { email, password, username, pronouns, type, bio } = event.target.elements;
+      const {
+        email,
+        password,
+        username,
+        pronouns,
+        type,
+        bio,
+      } = event.target.elements;
 
       try {
-        await app.auth().createUserWithEmailAndPassword(email.value, password.value);
+        await app
+          .auth()
+          .createUserWithEmailAndPassword(email.value, password.value);
         const UID = app.auth().currentUser.uid; //GETS USER ID FROM AUTHENTICAITON
         app
           .database()
@@ -32,13 +41,16 @@ const SignUp = ({ history }) => {
   );
   // const close = props.onHide;
   return (
-    <div>
+    <div className="landingModal">
+      <Modal.Header closeButton>
+        <Modal.Title>Sign up</Modal.Title>
+      </Modal.Header>
       <Form onSubmit={handleSignUp}>
         <Row>
           <Col>
             <Form.Group controlId="username">
               <Form.Label>Username</Form.Label>
-              <Form.Control type="string" placeholder="New display name" />
+              <Form.Control type="string" placeholder="Name displayed" />
             </Form.Group>
           </Col>
           <Col>
@@ -52,13 +64,16 @@ const SignUp = ({ history }) => {
           <Col>
             <Form.Group controlId="password">
               <Form.Label>Password </Form.Label>
-              <Form.Control type="string" placeholder="secretPasswordLookAway!" />
+              <Form.Control
+                type="string"
+                placeholder="secretPasswordLookAway!"
+              />
             </Form.Group>
           </Col>
           <Col>
             <Form.Group controlId="pronouns">
               <Form.Label>Pronouns</Form.Label>
-              <Form.Control as="select" multiple>
+              <Form.Control as="select">
                 <option>She/Hers</option>
                 <option>Him/His</option>
                 <option>They/Them</option>
