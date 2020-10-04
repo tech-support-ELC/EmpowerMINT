@@ -6,12 +6,6 @@ import {Modal, Button, Form, Row, Col} from "react-bootstrap";
 
 const SignUp = ({ history }) => {
 
-  // const [pronouns, setPronouns] = useState('')
-
-  // const handleChange = (event) => {
-  //   setPronouns(event.target.value)
-  // }
-
   const handleSignUp = useCallback(
     async (event) => {
 
@@ -43,10 +37,6 @@ const SignUp = ({ history }) => {
 
   return (
     <div>
-      {/* <Modal.Header closeButton>
-        <Modal.Title>Sign Up</Modal.Title> */}
-      {/* </Modal.Header> */}
-      {/* <Modal.Body> */}
         <Form onSubmit={handleSignUp}>
           <Row>
             <Col>
@@ -101,71 +91,11 @@ const SignUp = ({ history }) => {
             <Form.Label>Bio</Form.Label>
             <Form.Control as="textarea" rows="3" />
           </Form.Group>
-        {/* </Form> */}
-      {/* </Modal.Body>
-      <Modal.Footer> */}
         <Button variant="light" type="submit">
           Sign Up
         </Button>
         </Form>
-      {/* </Modal.Footer> */}
     </div>
-
-    // <div>
-    //   <h1>Sign Up</h1>
-    //   <form onSubmit={handleSignUp}>
-    //     <label>
-    //       email
-    //       <input name="email" type="email" placeholder="Email" />
-    //     </label>
-
-    //     <label>
-    //       password
-    //       <input name="password" type="password" placeholder="Password" />
-    //     </label>
-
-    //     <label>
-    //       username
-    //       <input name="username" type="username" placeholder="Username" />
-    //     </label>
-
-    //     <div>
-    //       <label>pronouns</label>
-
-    //       <select>
-    //         <option>she/hers</option>
-    //         <option>him/his</option>
-    //         <option>they/them</option>
-    //       </select>
-    //     </div>
-
-    //     <div>
-    //       <label>I am a:</label>
-
-    //       <select>
-    //         <option>Survivor</option>
-    //         <option>Supporter</option>
-    //         <option>Warrior - Stage 1</option>
-    //         <option>Warrior - Stage 2</option>
-    //         <option>Warrior - Stage 3</option>
-    //         <option>Warrior - Stage 4</option>
-    //       </select>
-    //     </div>
-
-    //     <div>
-    //       <label>
-    //         Bio/Interests
-    //         <input
-    //           name="Bio/Interests"
-    //           type="text"
-    //           placeholder="Bio/Interests"
-    //         />
-    //       </label>
-    //     </div>
-
-    //     <button type="submit">Sign Up</button>
-    //   </form>
-    // </div>
   );
 };
 
