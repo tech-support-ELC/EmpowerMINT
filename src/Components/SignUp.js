@@ -35,7 +35,7 @@ const SignUp = ({ history }) => {
     },
     [history]
   );
-  const close = props.onHide;
+  // const close = props.onHide;
   return (
     <div>
         <Form onSubmit={handleSignUp}>

@@ -11,7 +11,8 @@ const Routes = () => {
         <Route path="/landing" component={Landing} />
         <Route path="/signup" component={SignUp} />
         <Route path="/login" component={LogIn} />
-        <PrivateRoute exact path="/home" component={Home} />
+        {/* <PrivateRoute exact path="/home" component={Home} /> Temp removal to test */}
+        <Route exact path="/home" component={Home} />
         <Route path="/chats/:person" component={ChatScreen} />
         <Route path="/chats" component={ChatList} />
         <Route path="/signup" component={SignUp} />
