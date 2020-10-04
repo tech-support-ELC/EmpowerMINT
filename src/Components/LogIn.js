@@ -9,21 +9,27 @@ import Form from "react-bootstrap/Form";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 
-const LogIn = (props, history) => {
+const LogIn = (props) => {
+  const { history } = props;
   const handleLogIn = useCallback(
     async (event) => {
       event.preventDefault();
 
+      console.log("event", event.target);
       const { email, password } = event.target.elements;
 
       try {
-        await app.auth().SignInWithEmailAndPassword(email.value, password.value);
+        await app.auth().signInWithEmailAndPassword(email.value, password.value);
         const UID = app.auth().currentUser.uid; //GETS USER ID FROM AUTHENTICAITON
         app
           .database()
           .ref("users/" + UID)
-          .once("value");
-        history.push("/home");
+          .once("value")
+          .then(function (snapshot) {
+            console.log(snapshot.val(), "user????");
+          });
+        props.onHide();
+        // history.push("/home");
       } catch (error) {
         alert(error);
       }
@@ -31,37 +37,29 @@ const LogIn = (props, history) => {
     [history]
   );
 
-  const close = props.onHide;
   return (
     <div>
-      <Modal.Header closeButton>
-        <Modal.Title>Log in</Modal.Title>
-      </Modal.Header>
-      <Modal.Body>
-        <Form>
-          <Row>
-            <Col>
-              <Form.Group controlId="username">
-                <Form.Label>Username</Form.Label>
-                <Form.Control type="string" />
-              </Form.Group>
-            </Col>
-          </Row>
-          <Row>
-            <Col>
-              <Form.Group controlId="password">
-                <Form.Label>Password</Form.Label>
-                <Form.Control type="password" />
-              </Form.Group>
-            </Col>
-          </Row>
-        </Form>
-      </Modal.Body>
-      <Modal.Footer>
-        <Button variant="light" onClick={close}>
+      <Form onSubmit={handleLogIn}>
+        <Row>
+          <Col>
+            <Form.Group controlId="email">
+              <Form.Label>Email</Form.Label>
+              <Form.Control type="string" />
+            </Form.Group>
+          </Col>
+        </Row>
+        <Row>
+          <Col>
+            <Form.Group controlId="password">
+              <Form.Label>Password</Form.Label>
+              <Form.Control type="password" />
+            </Form.Group>
+          </Col>
+        </Row>
+        <Button variant="light" type="submit">
           Log in
         </Button>
-      </Modal.Footer>
+      </Form>
     </div>
   );
 };

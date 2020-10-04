@@ -4,7 +4,7 @@ import { withRouter } from "react-router";
 import app from "../firebase";
 import { Modal, Button, Form, Row, Col } from "react-bootstrap";
 
-const SignUp = ({ history }) => {
+const SignUp = (props, history) => {
   const handleSignUp = useCallback(
     async (event) => {
       event.preventDefault();
