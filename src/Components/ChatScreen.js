@@ -3,6 +3,7 @@ import Avatar from '@material-ui/core/Avatar'
 import './ChatScreen.css'
 
 function ChatScreen() {
+  const [input, setInput] = useState('')
   const [messages, setMessages] = useState([
     {
       name: 'Sarah',
@@ -20,6 +21,12 @@ function ChatScreen() {
       message: 'Thanks Sarah! How are you?'
     }
   ])
+
+  function handleSend(e) {
+    e.preventDefault()
+    setMessages([...messages, {message: input}])
+    setInput('')
+  }
 
   return (
     <div className="chatScreen">
@@ -39,8 +46,16 @@ function ChatScreen() {
       )}
 
       <form className="chatScreen-input">
-        <input className="chatScreen-inputField" placeholder="Type a message..." type="text" />
-        <button className="chatScreen-btn">SEND</button>
+        <input
+          value={input}
+          onChange={(e) => setInput(e.target.value)}
+          className="chatScreen-inputField"
+          placeholder="Type a message..."
+          type="text"
+        />
+        <button onClick={handleSend} className="chatScreen-btn">
+          SEND
+        </button>
       </form>
     </div>
   )
