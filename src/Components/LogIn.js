@@ -18,7 +18,9 @@ const LogIn = ({ history }) => {
       const { email, password } = event.target.elements;
 
       try {
-        await app.auth().signInWithEmailAndPassword(email.value, password.value);
+        await app
+          .auth()
+          .signInWithEmailAndPassword(email.value, password.value);
         const UID = app.auth().currentUser.uid; //GETS USER ID FROM AUTHENTICAITON
         app
           .database()
@@ -37,7 +39,10 @@ const LogIn = ({ history }) => {
   );
 
   return (
-    <div>
+    <div className="landingModal">
+      <Modal.Header closeButton>
+        <Modal.Title>Log In</Modal.Title>
+      </Modal.Header>
       <Form onSubmit={handleLogIn}>
         <Row>
           <Col>

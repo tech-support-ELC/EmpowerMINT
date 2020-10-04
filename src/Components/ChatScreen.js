@@ -4,6 +4,7 @@ import { Modal } from "react-bootstrap";
 import "./ChatScreen.css";
 
 function ChatScreen() {
+
   const [input, setInput] = useState("");
   const [messages, setMessages] = useState([
     {
@@ -23,6 +24,12 @@ function ChatScreen() {
     e.preventDefault();
     setMessages([...messages, { message: input }]);
     setInput("");
+  }
+
+  function handleSend(e) {
+    e.preventDefault()
+    setMessages([...messages, {message: input}])
+    setInput('')
   }
 
   return (
