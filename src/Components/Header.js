@@ -27,7 +27,7 @@ function Header() {
               </IconButton>
             </Nav.Link>
 
-            <Nav.Link href="chat">
+            <Nav.Link href="chats">
               <IconButton>
                 <ChatIcon className="header-icon" style={{ fontSize: 20 }} />
               </IconButton>

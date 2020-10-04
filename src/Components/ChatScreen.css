@@ -22,6 +22,20 @@
 .chatScreen-input {
   display: flex;
   padding: 5px;
-  position: fixed;
+  /* position: fixed; <= need this to stick input field at the bottom of the screen but it breaks the input field, don't know why */
   width: 100%;
+  bottom: 0;
+  border-top: 1px solid lightgray;
+}
+
+.chatScreen-inputField {
+  flex: 1;
+  padding: 10px;
+  border: none;
+}
+
+.chatScreen-btn {
+  margin-right: 20px;
+  background-color: white;
+  font-weight: bolder;
 }
