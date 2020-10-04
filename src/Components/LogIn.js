@@ -9,7 +9,7 @@ import Form from "react-bootstrap/Form";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 
-const LogIn = (history) => {
+const LogIn = ({ history }) => {
   // const { history } = props;
   const handleLogIn = useCallback(
     async (event) => {
