@@ -5,7 +5,17 @@ import Form from "react-bootstrap/Form";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 
+const db = {
+  username: "EsteēPink",
+  email: "esteepinkie@example.com",
+  password: "******",
+  type: "Warrior 2",
+  bio: "I love beauty products and traveling.",
+  pronouns: "she/hers",
+};
+
 function UpdateProfile(props) {
+  const data = db;
   const close = props.onHide;
   return (
     <>
@@ -18,14 +28,14 @@ function UpdateProfile(props) {
             <Row>
               <Col>
                 <Form.Group controlId="newName">
-                  <Form.Label>Display Name</Form.Label>
-                  <Form.Control type="string" placeholder="New display name" />
+                  <Form.Label>Username</Form.Label>
+                  <Form.Control type="string" placeholder={data.username} />
                 </Form.Group>
               </Col>
               <Col>
                 <Form.Group controlId="newEmail">
                   <Form.Label>Email address</Form.Label>
-                  <Form.Control type="email" placeholder="name@example.com" />
+                  <Form.Control type="email" placeholder={data.email} />
                 </Form.Group>
               </Col>
             </Row>
@@ -33,24 +43,19 @@ function UpdateProfile(props) {
               <Col>
                 <Form.Group controlId="newPass">
                   <Form.Label>Password </Form.Label>
-                  <Form.Control
-                    type="string"
-                    placeholder="secretPasswordLookAway!"
-                  />
+                  <Form.Control type="string" placeholder={data.password} />
                 </Form.Group>
               </Col>
               <Col>
                 <Form.Group controlId="newPronouns">
                   <Form.Label>Pronouns</Form.Label>
-                  <Form.Control type="string " placeholder="They/them/theirs" />
+                  <Form.Control type="string " placeholder={data.pronouns} />
                 </Form.Group>
               </Col>
             </Row>
 
             <Form.Group controlId="newType">
-              <Form.Label>
-                Choose the identifier that best describes you
-              </Form.Label>
+              <Form.Label>Choose the identifier that best describes you</Form.Label>
               <Form.Control as="select" multiple>
                 <option>Survivor</option>
                 <option>Supporter</option>
@@ -62,7 +67,7 @@ function UpdateProfile(props) {
             </Form.Group>
             <Form.Group controlId="newBio">
               <Form.Label>Bio</Form.Label>
-              <Form.Control as="textarea" rows="3" />
+              <Form.Control as="textarea" rows="3" placeholder={data.bio} />
             </Form.Group>
           </Form>
         </Modal.Body>
