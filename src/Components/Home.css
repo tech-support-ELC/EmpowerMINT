@@ -1,0 +1,10 @@
+#cardContainer {
+  justify-content: space-between;
+  display: flex;
+  flex-direction: row;
+}
+
+.text-center {
+  width: 20%;
+  height: 20%;
+}

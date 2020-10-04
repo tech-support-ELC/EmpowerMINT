@@ -1,26 +1,30 @@
-import React, {useState} from 'react'
-import Avatar from '@material-ui/core/Avatar'
-import './ChatScreen.css'
+import React, { useState } from "react";
+import EcoIcon from "@material-ui/icons/Eco";
+import { Modal } from "react-bootstrap";
+import "./ChatScreen.css";
 
 function ChatScreen() {
-  const [input, setInput] = useState('')
+
+  const [input, setInput] = useState("");
   const [messages, setMessages] = useState([
     {
-      name: 'Sarah',
-      image:
-        'https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80',
-      message: 'Hey! How are you?'
+      name: "FighterGal123",
+      message: "Hey! How are you?",
     },
     {
-      name: 'Sarah',
-      image:
-        'https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80',
-      message: "Hope you're well"
+      name: "FighterGal123",
+      message: "Hope you're well",
     },
-    {
-      message: 'Thanks Sarah! How are you?'
-    }
-  ])
+    // { WILL DO THE RESPONSE IN THE DEMO
+    //   message: 'Thanks Sarah! How are you?'
+    // }
+  ]);
+
+  function handleSend(e) {
+    e.preventDefault();
+    setMessages([...messages, { message: input }]);
+    setInput("");
+  }
 
   function handleSend(e) {
     e.preventDefault()
@@ -30,12 +34,13 @@ function ChatScreen() {
 
   return (
     <div className="chatScreen">
-      <p> YOU MATCHED WITH {messages[0].name.toUpperCase()} ON 10/03/20 </p>
-      {messages.map(
-        (message) =>
+      <p id="status"> EncourageMINT from {messages[0].name.toUpperCase()} </p>
+
+      <div id="chatContainer">
+        {messages.map((message) =>
           message.name ? (
             <div className="chatScreen-message">
-              <Avatar className="chatScreen-avatar" alt={message.name} src={message.image} />
+              <EcoIcon className="chatScreen-avatar" alt={message.name} />
               <p className="chatScreen-text">{message.message}</p>
             </div>
           ) : (
@@ -43,7 +48,8 @@ function ChatScreen() {
               <p className="chatScreen-textUser">{message.message}</p>
             </div>
           )
-      )}
+        )}
+      </div>
 
       <form className="chatScreen-input">
         <input
@@ -58,7 +64,7 @@ function ChatScreen() {
         </button>
       </form>
     </div>
-  )
+  );
 }
 
-export default ChatScreen
+export default ChatScreen;

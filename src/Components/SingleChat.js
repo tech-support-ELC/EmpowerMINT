@@ -1,13 +1,13 @@
 import React from 'react'
-import Avatar from '@material-ui/core/Avatar'
+import EcoIcon from '@material-ui/icons/Eco'
 import {Link} from 'react-router-dom'
 import './SingleChat.css'
 
-function SingleChat({name, message, profilePic, timestamp}) {
+function SingleChat({name, message, timestamp}) {
   return (
     <Link to={`/chats/${name}`}>
       <div className="single-chat">
-        <Avatar className="single-chat-image" alt={name} src={profilePic} />
+        <EcoIcon className="single-chat-image" alt={name}  />
         <div className="single-chat-details">
           <h2>{name}</h2>
           <p>{message}</p>

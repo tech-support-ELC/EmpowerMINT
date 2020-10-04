@@ -1,3 +1,18 @@
+/*  */
+#chatContainer {
+  height: 100%;
+  overflow: auto;
+  scroll-snap-align: end;
+}
+
+#status {
+  text-align: center;
+}
+.chatScreen {
+  width: 50%;
+  height: 60%;
+}
+
 .chatScreen-message {
   display: flex;
   align-items: center;
