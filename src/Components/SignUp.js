@@ -4,8 +4,9 @@ import { withRouter } from "react-router";
 import app from "../firebase";
 import {Modal, Button, Form, Row, Col} from "react-bootstrap";
 
-const SignUp = ({ history }) => {
 
+const SignUp = ({ history }) => {
+  
   const handleSignUp = useCallback(
     async (event) => {
 
@@ -34,7 +35,7 @@ const SignUp = ({ history }) => {
     },
     [history]
   );
-
+  const close = props.onHide;
   return (
     <div>
         <Form onSubmit={handleSignUp}>
