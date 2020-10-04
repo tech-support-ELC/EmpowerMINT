@@ -1,34 +1,38 @@
 import React, {useState} from 'react'
-import Avatar from '@material-ui/core/Avatar'
+import EcoIcon from '@material-ui/icons/Eco'
+import {Modal} from "react-bootstrap"
 import './ChatScreen.css'
 
 function ChatScreen() {
+  const [input, setInput] = useState('')
   const [messages, setMessages] = useState([
     {
-      name: 'Sarah',
-      image:
-        'https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80',
+      name: 'FighterGal123',
       message: 'Hey! How are you?'
     },
     {
-      name: 'Sarah',
-      image:
-        'https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80',
+      name: 'FighterGal123',
       message: "Hope you're well"
     },
-    {
-      message: 'Thanks Sarah! How are you?'
-    }
+    // { WILL DO THE RESPONSE IN THE DEMO
+    //   message: 'Thanks Sarah! How are you?'
+    // }
   ])
 
+  function handleSend(e) {
+    e.preventDefault()
+    setMessages([...messages, {message: input}])
+    setInput('')
+  }
+
   return (
-    <div className="chatScreen">
-      <p> YOU MATCHED WITH {messages[0].name.toUpperCase()} ON 10/03/20 </p>
+    <div className="chatScreen"> 
+      <p> EncourageMINT from {messages[0].name.toUpperCase()} </p>
       {messages.map(
         (message) =>
           message.name ? (
             <div className="chatScreen-message">
-              <Avatar className="chatScreen-avatar" alt={message.name} src={message.image} />
+              <EcoIcon className="chatScreen-avatar" alt={message.name}/>
               <p className="chatScreen-text">{message.message}</p>
             </div>
           ) : (
@@ -37,10 +41,18 @@ function ChatScreen() {
             </div>
           )
       )}
-
+      
       <form className="chatScreen-input">
-        <input className="chatScreen-inputField" placeholder="Type a message..." type="text" />
-        <button className="chatScreen-btn">SEND</button>
+        <input
+          value={input}
+          onChange={(e) => setInput(e.target.value)}
+          className="chatScreen-inputField"
+          placeholder="Type a message..."
+          type="text"
+        />
+        <button onClick={handleSend} className="chatScreen-btn">
+          SEND
+        </button>
       </form>
     </div>
   )

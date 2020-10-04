@@ -27,15 +27,17 @@ function Home() {
     <div style={{display: 'flex', flexDirection: 'row', }}>
       {users.map((user)=>{
           return (
-              <Card className="text-center" style={{flex: 1}}>
+              <Card className="text-center" >
               <Card.Body>
                 <Card.Title>{user.username}</Card.Title>
                 <Card.Text>
+                  {user.pronouns}
+                  <br/>
                   {user.bio}
                 </Card.Text>
               </Card.Body>
               <Card.Footer>
-                <Button variant="primary">Match Button</Button>
+                <Button variant="primary" href="chats/Sarah">Match</Button>
               </Card.Footer>
             </Card>
           )
