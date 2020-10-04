@@ -9,7 +9,28 @@ import Form from "react-bootstrap/Form";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 
-const LogIn = (props) => {
+const LogIn = (props, history) => {
+  const handleLogIn = useCallback(
+    async (event) => {
+      event.preventDefault();
+
+      const { email, password } = event.target.elements;
+
+      try {
+        await app.auth().SignInWithEmailAndPassword(email.value, password.value);
+        const UID = app.auth().currentUser.uid; //GETS USER ID FROM AUTHENTICAITON
+        app
+          .database()
+          .ref("users/" + UID)
+          .once("value");
+        history.push("/home");
+      } catch (error) {
+        alert(error);
+      }
+    },
+    [history]
+  );
+
   const close = props.onHide;
   return (
     <div>
