@@ -38,6 +38,7 @@ const SignUp = ({ history }) => {
   // const close = props.onHide;
   return (
     <div>
+
         <Form onSubmit={handleSignUp}>
           <Row>
             <Col>
@@ -96,6 +97,7 @@ const SignUp = ({ history }) => {
           Sign Up
         </Button>
         </Form>
+
     </div>
   );
 };
