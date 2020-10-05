@@ -36,7 +36,7 @@ function Home() {
               </Card.Text>
             </Card.Body>
             <Card.Footer>
-              <Button variant="success" href="chats" size="sm">
+              <Button variant="success" href="chats/FighterGal123" size="sm">
                 Chat
               </Button>
             </Card.Footer>
