@@ -2,7 +2,7 @@
 
 ![EncourageMint1](public/slides/EncourageMint1.jpg)
 
-### **LCHackathon Hack for Pink Submission**
+### **ELCHackathon Hack for Pink Submission**
 
 EncourageMint is a Progressive Web App (PWA) built to connect community members affected by breast cancer, whether they're providing care, experiencing treatment, or in remission.
 
