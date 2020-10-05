@@ -23,16 +23,16 @@ function Home() {
   const users = db;
 
   return (
-    <div id="cardContainer">
+    <div id="cardContainer" >
       {users.map((user) => {
         return (
-          <Card className="text-center">
+          <Card style={{ width: '20em', height: "15em", textAlign:"center"}}>
             <Card.Body>
-              <Card.Title>{user.username}</Card.Title>
+              <Card.Title><b>{user.username}</b></Card.Title>
               <Card.Text>
-                {user.pronouns}
-                <br />
-                {user.bio}
+                <b>Pronouns:</b> {user.pronouns}
+                <br /> <br/>
+                <b>Bio:</b> {user.bio}
               </Card.Text>
             </Card.Body>
             <Card.Footer>
