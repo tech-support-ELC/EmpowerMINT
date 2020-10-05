@@ -21,45 +21,48 @@ function Landing() {
   return (
     <div id="fullLanding">
       {" "}
+      <div id="hands"></div>
       <div className="landing">
+        {" "}
         <div>
           {" "}
           <h1> Welcome to EncourageMINT,</h1>
-          <h4>a community of people affected by breast cancer.</h4>
-          <h4>
-            Join now to be matched with community members based on the kind of
-            support YOU ask for.
-          </h4>
+          <div id="welcome">
+            <h3>a community of and for people affected by breast cancer.</h3>
+
+            <h4>
+              Join now to be matched with community members based on the kind of
+              support YOU ask for.
+            </h4>
+          </div>
         </div>
+        <div id="landingLinks">
+          <div id="loginsignup">
+            <Button variant="light" onClick={handleLogin}>
+              Log In
+            </Button>
 
-        <div id="loginsignup">
-          <Button variant="light" onClick={handleLogin}>
-            Log In
-          </Button>
+            <div> or </div>
 
-          <div> or </div>
-
-          <Button variant="light" onClick={handleSignup}>
-            Sign Up
+            <Button variant="light" onClick={handleSignup}>
+              Sign Up
+            </Button>
+          </div>
+          <br />
+          <Button id="openAbout" onClick={handleAbout}>
+            About EncourageMINT
           </Button>
         </div>
-        <Button id="openAbout" onClick={handleAbout}>
-          About EncourageMINT
-        </Button>
-
         <Modal show={showSignup} onHide={handleClose} animation={false}>
           <SignUp onHide={handleClose} />
         </Modal>
-
         <Modal show={showLogin} onHide={handleClose} animation={false}>
           <LogIn onHide={handleClose} />
         </Modal>
-
         <Modal show={showAbout} onHide={handleClose} animation={false}>
           <About onHide={handleClose} />
         </Modal>
       </div>
-      <div className="landing"></div>
     </div>
   );
 }
