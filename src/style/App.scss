@@ -109,6 +109,7 @@ button {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
+  text-align: center;
   margin: 0 auto;
   button {
     width: fit-content;
@@ -141,7 +142,7 @@ button {
   a {
     color: rgb(184, 28, 93);
     &:hover {
-      color: rgb(243, 128, 176);
+      color: rgba(230, 128, 169, 1);
     }
   }
   max-width: 80vw;
@@ -154,7 +155,7 @@ button {
   border: none;
   color: black;
   &:hover {
-    background-color: rgb(168, 26, 85);
+    background-color: rgb(247, 175, 202);
 
     color: white;
   }
