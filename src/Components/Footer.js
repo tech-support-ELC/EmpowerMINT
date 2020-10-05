@@ -34,7 +34,7 @@ function Footer() {
           </Navbar.Brand>
         </Container>
       </Navbar>
-      <Modal show={showAbout} onHide={handleClose} animation={false}>
+      <Modal  show={showAbout} onHide={handleClose} animation={false}>
         <About onHide={handleClose} />
       </Modal>
     </footer>
