@@ -1,6 +1,16 @@
-import React from 'react'
-import {Route, Switch} from 'react-router-dom'
-import {Home, Landing, ChatList, SignUp, Profile, LogIn, PrivateRoute, ChatScreen} from './index'
+import React from "react";
+import { Route, Switch } from "react-router-dom";
+import {
+  Home,
+  Landing,
+  ChatList,
+  SignUp,
+  Profile,
+  LogIn,
+  PrivateRoute,
+  ChatScreen,
+  About,
+} from "./index";
 
 const Routes = () => {
   return (
@@ -17,9 +27,10 @@ const Routes = () => {
         <Route path="/chats" component={ChatList} />
         <Route path="/signup" component={SignUp} />
         <Route path="/profile" component={Profile} />
+        <Route path="/about" component={About} />
       </Switch>
     </div>
-  )
-}
+  );
+};
 
-export default Routes
+export default Routes;

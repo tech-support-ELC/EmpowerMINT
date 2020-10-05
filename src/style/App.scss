@@ -122,16 +122,20 @@ button {
   // height: 100%;
 }
 
-#landing {
+.landing {
   height: 100%;
   max-width: 500px;
-  width: 60vw;
+  width: 50vw;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
   button {
     width: fit-content;
   }
+}
+
+#fullLanding {
+  height: 100%;
 }
 
 #loginsignup {
@@ -143,4 +147,47 @@ button {
 
 #gitLink {
   justify-content: center;
+}
+
+#about {
+  a {
+    color: rgb(184, 28, 93);
+    &:hover {
+      color: rgb(243, 128, 176);
+    }
+  }
+  max-width: 80vw;
+}
+
+#openAbout {
+  background: rgb(247, 175, 202);
+  background: radial-gradient(
+    circle,
+    rgba(247, 175, 202, 1) 13%,
+    rgba(230, 128, 169, 1) 50%,
+    rgba(231, 136, 175, 1) 76%,
+    rgba(238, 94, 154, 1) 91%
+  );
+  border: none;
+  color: black;
+  &:hover {
+    background: rgb(247, 75, 138);
+    background: radial-gradient(
+      circle,
+      rgba(247, 75, 138, 1) 13%,
+      rgb(196, 60, 114) 50%,
+      rgb(168, 26, 85) 76%,
+      rgb(121, 17, 60) 91%
+    );
+    color: white;
+  }
+}
+
+@media (max-width: 600px) {
+  h1 {
+    font-size: 20pt;
+  }
+  h4 {
+    font-size: 14pt;
+  }
 }

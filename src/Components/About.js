@@ -6,7 +6,7 @@ import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 function About() {
   return (
-    <div>
+    <div id="about">
       <Modal.Header closeButton>
         <Modal.Title>About EncourageMINT</Modal.Title>
       </Modal.Header>
@@ -15,11 +15,28 @@ function About() {
           <Col>
             <h4>Who we are</h4>
             <p>
-              EncourageMINT was built by <a>Ariel Ng</a>, <a>Kristi Nanco</a>,{" "}
-              <a>Taihua Rubin</a>, and <a>Emma Seely-Katz</a>. We are a group of
-              software engineers who studied full-stack development together and
-              wanted to continue working on community-oriented projects as a
-              team.
+              EncourageMINT was built by{" "}
+              <a href="https://www.linkedin.com/in/arielng/ " target="_blank">
+                Ariel Ng
+              </a>
+              ,{" "}
+              <a href="https://www.linkedin.com/in/knanco/ " target="_blank">
+                Kristi Nanco
+              </a>
+              ,{" "}
+              <a
+                href="https://www.linkedin.com/in/taihuarubin/ "
+                target="_blank"
+              >
+                Taihua Rubin
+              </a>
+              , and{" "}
+              <a href="https://www.linkedin.com/in/emmask/ " target="_blank">
+                Emma Seely-Katz
+              </a>
+              . We are a group of software engineers who studied full-stack
+              development together and wanted to continue working on
+              community-oriented projects as a team.
               <br />
               <br />
               We deeply value the creation of networks of care, so when ELC
@@ -45,7 +62,14 @@ function About() {
         </Row>
       </Modal.Body>
       <Modal.Footer id="gitLink">
-        Check out the project repository on <a>GitHub</a>
+        Check out the project repository on{" "}
+        <a
+          href="https://github.com/tech-support-ELC/EncourageMINT"
+          target="_blank"
+        >
+          GitHub
+        </a>
+        !
       </Modal.Footer>
     </div>
   );
