@@ -26,17 +26,23 @@ function Landing() {
         {" "}
         <div>
           {" "}
-          <h1> Welcome to EncourageMINT,</h1>
+          <h1> Welcome to Encourage<b>MINT</b>,</h1>
+          <br/>
           <div id="welcome">
-            <h3>a community of and for people affected by breast cancer.</h3>
-
-            <h4>
-              Join now to be matched with community members based on the kind of
-              support YOU ask for.
-            </h4>
+            <h4>A community <b>OF</b> and <b>FOR</b> people affected by breast cancer.</h4>
+            <br/>
+            <h5>
+            Join now to chat with community members that understand what you’re going through whether you are in treatment, providing care, or in remission.
+            </h5>
           </div>
         </div>
         <div id="landingLinks">
+          <br />
+          <Button id="openAbout" onClick={handleAbout}>
+            About EncourageMINT
+          </Button>
+          <br/>
+          <br/>
           <div id="loginsignup">
             <Button variant="light" onClick={handleLogin}>
               Log In
@@ -48,10 +54,6 @@ function Landing() {
               Sign Up
             </Button>
           </div>
-          <br />
-          <Button id="openAbout" onClick={handleAbout}>
-            About EncourageMINT
-          </Button>
         </div>
         <Modal show={showSignup} onHide={handleClose} animation={false}>
           <SignUp onHide={handleClose} />

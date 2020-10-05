@@ -48,15 +48,10 @@ function About() {
           <Col>
             <h4>Our mission</h4>
             <p>
-              The guiding belief behind EncourageMINT is that no one knows what
-              kind of support a person might need better than the person
-              themself, whether it's commiseration, advice, or just a listening
-              ear.
+            The guiding belief behind EncourageMINT is that no one should feel like a burden because they are in need of support, whether it be  commiseration, advice, or just a listening ear.
               <br />
               <br />
-              EncourageMINT matches users based on what they are looking for and
-              where they are in their fight against breast cancer, whether they
-              are in treatment, providing care, or in remission.
+              EncourageMINT allows users to anonymously and honestly chat with their peers whether they are in treatment, providing care, or in remission. By having users sign up anonymously, they are free to express themselves without the fear of identification. 
             </p>
           </Col>
         </Row>

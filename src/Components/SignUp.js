@@ -66,7 +66,7 @@ const SignUp = ({ history }) => {
               <Form.Label>Password </Form.Label>
               <Form.Control
                 type="string"
-                placeholder="secretPasswordLookAway!"
+                placeholder="*****"
               />
             </Form.Group>
           </Col>
