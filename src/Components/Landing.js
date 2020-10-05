@@ -37,6 +37,7 @@ function Landing() {
           </div>
         </div>
         <div id="landingLinks">
+          <br />
           <Button id="openAbout" onClick={handleAbout}>
             About EncourageMINT
           </Button>
