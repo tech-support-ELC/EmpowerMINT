@@ -62,7 +62,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 ## 👾 How to Use this Repository?
 
 ```shell
-git clone
+git clone https://github.com/tech-support-ELC/EncourageMINT.git
 npm install
 npm start
 ```
