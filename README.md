@@ -22,7 +22,7 @@ EncourageMint is a Progressive Web App (PWA) built to connect community members 
 
 ## ⛈ Prompt
 
-Breast cancer is the most commonly occurring cancer in women and the second most common cancer overall. As of january 2020, there are more than 3.5 million women with a history of breast cancer in the U.S. Breast cancer affects not only the patient, but the people who care about them.
+Breast cancer is the most commonly occurring cancer in women and the second most common cancer overall. As of january 2020, there are more than 3.5 million women with a history of breast cancer in the U.S. Breast cancer affects not only the patient, but also the people who care about them.
 
 ---
 
@@ -53,7 +53,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## 🖼 Project Presentation:
 
-[Link to the slides](https://docs.google.com/presentation/d/1nabBGj7HYGkj76Szi-iOeEpba-n6dV4uZYT6Tdeqn-g/edit#slide=id.g35ed75ccf_015)
+[Link to the slides](https://docs.google.com/presentation/d/e/2PACX-1vS79YwMNfeZe9vYfeUxBCbXgjQJInWpkHoRqkA6rZMQpNMuVNI2QVQqedWMu-mtbPTFhPiYCCr2kqbC/pub?start=true&loop=false&delayms=3000&slide=id.g9b6d072362_5_13)
 
 [Link to Video (to be updated)](http)
 
