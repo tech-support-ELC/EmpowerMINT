@@ -53,9 +53,13 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## 🖼 Project Presentation:
 
-[Link to the slides](https://docs.google.com/presentation/d/e/2PACX-1vS79YwMNfeZe9vYfeUxBCbXgjQJInWpkHoRqkA6rZMQpNMuVNI2QVQqedWMu-mtbPTFhPiYCCr2kqbC/pub?start=true&loop=false&delayms=3000&slide=id.g9b6d072362_5_13)
+[ 📺 Watch the Video presentation](https://www.youtube.com/watch?v=Ouzqb7u53mI&feature=emb_title)
 
-[Link to Video (to be updated)](http)
+[🦾 Check out our DevPost Submission](https://devpost.com/software/encouragemint-35p2l4)
+
+[🍔 Take a look at the slides](https://docs.google.com/presentation/d/e/2PACX-1vS79YwMNfeZe9vYfeUxBCbXgjQJInWpkHoRqkA6rZMQpNMuVNI2QVQqedWMu-mtbPTFhPiYCCr2kqbC/pub?start=true&loop=false&delayms=3000&slide=id.g9b6d072362_5_13)
+
+[👩‍🚒 Learn how we planned the project](https://miro.com/app/board/o9J_kmIVq7M=/)
 
 ---
 
