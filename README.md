@@ -2,7 +2,7 @@
 
 ![EncourageMint1](public/slides/EncourageMint1.jpg)
 
-### **ELCHackathon Hack for Pink Submission**
+### **ELC Hack for Pink Hackathon Submission**
 
 EncourageMint is a Progressive Web App (PWA) built to connect community members affected by breast cancer, whether they're providing care, experiencing treatment, or in remission.
 
@@ -22,24 +22,24 @@ EncourageMint is a Progressive Web App (PWA) built to connect community members 
 
 ## ⛈ Prompt
 
-Breast cancer is the most commonly occurring cancer in women and the second most common cancer overall. As of january 2020, there are more than 3.5 million women with a history of breast cancer in the U.S. Breast cancer affects not only the patient, but also the people who care about them.
+Breast cancer is the most commonly occurring cancer in women and the second most common cancer overall. As of January 2020, there are more than 3.5 million women with a history of breast cancer in the U.S. Breast cancer affects not only the patient, but also impacts the people who care for them.
 
 ---
 
 ## 🧚‍♀️ How Can EncourageMint Help?
 
 ![Community](public/slides/EncourageMint3.jpg)
-The guiding belief behind EncourageMint is that no one should feel like a burden because they are in need of support, whether it be commiseration, advice, or just a listening ear.
+The guiding belief b
+ehind EncourageMint is that no one should feel like a burden because they are in need of support, whether it be commiseration, advice, or just a listening ear.
 
-Join now to chat with community members that understand what you’re going through whether you are in treatment, providing care, or in remission.
+Community members are understanding of what you’re going through whether you are in treatment, providing care, or in remission because they are also experiencing their own journeys.
 
 ---
 
-## 🗣👂 Anonymous Listening Ear
-
+## 🗣👂 Anonymous Chatting
 ![Anonymous](public/slides/EncourageMint4.jpg)
 
-EncourageMint allows users to anonymously and honestly chat with their peers whether they are in treatment, providing care, or in remission. By having users sign up anonymously, they are free to express themselves without the fear of identification.
+Why anonymity? We recognized that some people may conceal their true feelings to not burden those around them. By giving our users the ability to chat anonymously, we've given them the freedom to honestly express themselves without the fear of identification and abstracting the need for internalizing by allowing them to connect with somebody who better understands what they are going through.
 
 ---
 
