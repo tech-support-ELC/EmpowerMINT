@@ -1,10 +1,10 @@
-# 💚 EmcourageMint 💚
+# 💚 EmcourageMINT 💚
 
 ![EncourageMint1](public/slides/EncourageMint1.jpg)
 
 ### **ELCHackathon Hack for Pink Submission**
 
-EncourageMint is a Progressive Web App (PWA) built to connect community members affected by breast cancer, whether they're providing care, experiencing treatment, or in remission.
+EncourageMINT is a Progressive Web App (PWA) built to connect community members affected by breast cancer, whether they're providing care, experiencing treatment, or in remission.
 
 ---
 
@@ -26,7 +26,7 @@ Breast cancer is the most commonly occurring cancer in women and the second most
 
 ---
 
-## 🧚‍♀️ How Can EncourageMint Help?
+## 🧚‍♀️ How Can EncourageMINT Help?
 
 ![Community](public/slides/EncourageMint3.jpg)
 The guiding belief behind EncourageMINT is that no one should feel like a burden because they are in need of support, whether it be commiseration, advice, or just a listening ear.
@@ -46,7 +46,7 @@ EncourageMINT allows users to anonymously and honestly chat with their peers whe
 ## 💻 🥞 Tech Stack:
 
 ![TechStack](public/slides/EncourageMint5.jpg)
-This is a non-exhaustive list of the technologies we used to build EncourageMint.
+This is a non-exhaustive list of the technologies we used to build EncourageMINT.
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ---
